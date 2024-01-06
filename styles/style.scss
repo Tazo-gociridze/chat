@@ -1,0 +1,51 @@
+
+//global
+@import './scss/globalStyles/siteBar';
+@import './scss/globalStyles/header';
+
+//contact
+@import './scss/contactStyles/contactHeader';
+@import '../styles/scss/contactStyles/contactContainer';
+
+
+//fonts
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+ $quicksand : 'Quicksand', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    transition: 0.3s;
+    padding-left: 70px;
+}
+
+.padding_left{
+    padding-left: 240px;
+}
+
+@media (max-width:895px) { 
+.padding_left{
+    padding-left: 0px;
+}
+body{
+    padding-left: 0px;
+}
+}
+
+.display-none{
+    display: none;
+}
+
+// .margin-auto{
+//     margin: auto;
+// }
+
+

@@ -1,0 +1,81 @@
+.contacts__parent {
+    display: flex;
+}
+
+.contacts__parent-item {
+    .p-3 {
+        position: relative;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.089);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(128, 0, 128, 0);
+        }
+
+        &::after{
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('./../imgs/contactIcons/plus.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+        }
+
+
+        &:hover {
+
+            &::before {
+                background-color: rgba(128, 0, 128, 0.651);
+                cursor: pointer;
+            }
+
+            &::after{
+                content: '';
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+
+        .contact-item__name-email {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            background-color: rgb(194, 175, 175);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .name-email {
+            p {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 14px;
+                color: rgba(88, 88, 88, 0.733);
+            }
+        }
+    }
+}
