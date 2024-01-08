@@ -21,7 +21,9 @@ function sitebarResponse() {
 
 // sitebar toggle
 
-function openCloseSitebar() {
+function openCloseSitebar(e) {
+        e.stopPropagation()
+
         body.classList.toggle('padding_left')
         header.classList.toggle('padding_left')
 
@@ -46,7 +48,7 @@ function smResOpenCloseSitebar() {
 }
 
  
-headerIcon.addEventListener('click', () => openCloseSitebar())
+headerIcon.addEventListener('click', (e) => openCloseSitebar(e))
 smResHeaderIcon.addEventListener('click', () => smResOpenCloseSitebar())
 sitebarBackdrop.addEventListener('click', (e) => {
     e.stopPropagation()
@@ -54,6 +56,7 @@ sitebarBackdrop.addEventListener('click', (e) => {
     sitebarBackdrop.classList.remove('sitebar-backdrop-visible')
 })
 
+//breakpoint
 
 function myFunction(x) {
     if (x.matches) { 
@@ -70,3 +73,96 @@ function myFunction(x) {
     myFunction(x);
   });
 
+
+// tools active
+
+const headerTools = document.querySelectorAll('.tool-item')
+const headerToolBar = document.querySelectorAll('.header-tool-bar')
+
+for(let i=0; i < headerTools.length; i++){
+    headerTools[i].addEventListener('click', (e) =>{
+        e.stopPropagation()
+       const tool = headerTools[i].querySelector('.header-tool-bar')
+
+       for(let j=0; j < headerToolBar.length; j++){
+          headerToolBar[j].classList.remove('d-block')
+       }
+
+       tool.classList.toggle('d-block')
+       console.log('asdw')
+    })   
+}
+
+document.body.addEventListener('click', () =>{
+    for(let j=0; j < headerToolBar.length; j++){
+        headerToolBar[j].classList.remove('d-block')
+    }
+})
+
+// dark-mode
+
+const moon = document.querySelector('.moon-icon')
+const sun = document.querySelector('.sun-icon')
+
+moon.addEventListener('click', () =>{
+    moon.classList.add('d-none')
+    sun.classList.remove('d-none')
+})
+
+sun.addEventListener('click', () =>{
+    sun.classList.add('d-none')
+    moon.classList.remove('d-none')
+})
+
+
+const darkModeBtn = document.querySelector('.dark-mode-icon')
+const rootElement = document.querySelector('.parent')
+
+function darkmode(e){
+    e.stopPropagation()
+    const wasDarkMode = localStorage.getItem('darkmode') === 'true'
+
+    localStorage.setItem('darkmode', !wasDarkMode)
+    rootElement.classList.toggle('dark-mode', !wasDarkMode)
+}
+
+darkModeBtn.addEventListener('click', (e) => darkmode(e))
+
+function onLoad() {
+    rootElement.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true')
+}
+
+document.addEventListener('DOMContentLoaded', onLoad)
+
+// select languages
+
+const languages = document.querySelectorAll('.lang')
+const headerLangPng = document.querySelector('.header-lang-png')
+
+for (const lang of languages) {
+    lang.addEventListener('click', (e) => {
+        e.stopPropagation()
+        const image = lang.querySelector('img')
+        headerLangPng.src = image.src
+
+        for(let h = 0; h < headerToolBar.length; h++) {
+            headerToolBar[h].classList.remove('d-block')
+        }
+    })
+}
+
+//scrollY
+
+const scrollBtn = document.querySelector('.top-scroll-btn')
+
+scrollBtn.addEventListener('click', () => {
+    window.scrollBy(0, -1000000)
+})
+
+window.addEventListener('scroll', () =>{
+    if(window.pageYOffset === 0){
+    } else{
+        scrollBtn.classList.remove('d-none')
+    }
+   
+})

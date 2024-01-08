@@ -3,7 +3,7 @@
 }
 
 .contacts__parent-item {
-    .p-3 {
+    .contact-item {
         position: relative;
         border-radius: 8px;
         background-color: white;
@@ -24,33 +24,20 @@
             background-color: rgba(128, 0, 128, 0);
         }
 
-        &::after{
-            content: '';
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url('./../imgs/contactIcons/plus.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 0;
-        }
-
-
         &:hover {
 
             &::before {
                 background-color: rgba(128, 0, 128, 0.651);
-                cursor: pointer;
             }
 
-            &::after{
-                content: '';
-                opacity: 1;
-                cursor: pointer;
+            .contact-item__name-email {
+            
+                button {
+                    visibility: visible;
+                    opacity: 1;
             }
+        }
+
         }
 
         .contact-item__name-email {
@@ -58,6 +45,22 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 20px;
+
+            button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                visibility: hidden;
+                opacity: 0;
+                background-color: rgb(253, 236, 236);
+                color: rgb(68, 68, 68);
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 14px;
+                cursor: pointer;
+            }
         }
 
         .avatar {

@@ -16,7 +16,7 @@
 
     <div class="parent">
         <div class="page w-100">
-            <header class="header padding_left">
+            <header class="header padding_left light-element">
                 <div class="container-fluid h-100 px-4">
                     <div class="row h-100 align-items-center">
                         <div class="menu-icon col-1">
@@ -35,15 +35,74 @@
 
                         <div class="header__tools col-11">
                             <div class="header__tools-items">
-                                <div><img src="../imgs/headerIcons/usa.png" alt=""></div>
-                                <div style="transform: rotate(-25deg);">
-                                    <img src="../imgs/headerIcons/dark-mode.png" alt="">
+                                <div class="header-tool tool-item">
+                                    <img class="header-lang-png" src="../imgs/headerIcons/usa.png" alt="">
+                                    <div class="header-tool-bar lang-bar">
+                                        <div class="languages">
+                                            <div class="lang">
+                                                <img src="..//imgs/headerIcons/usa.png" alt="">
+                                                <span>English</span>
+                                            </div>
+                                            <div class="lang">
+                                                <img src="..//imgs/headerIcons/geo.png" alt="">
+                                                <span>georgian</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div><img src="../imgs/headerIcons/notification.png" alt=""></div>
+                                <div class="header-tool dark-mode-icon">
+                                    <div class="moon-icon header-tool-icon">
+                                        <ion-icon name="moon-outline"></ion-icon>
+                                    </div>
+                                    <div class="sun-icon header-tool-icon d-none">
+                                        <ion-icon name="sunny-outline"></ion-icon>
+                                    </div>
+                                </div>
+
+                                <div class="header-tool tool-item">
+                                    <div class="header-tool-icon">
+                                        <ion-icon name="notifications-outline"></ion-icon>
+                                    </div>
+
+                                    <div class="header-tool-bar notif-bar">
+                                        <div class="header-tool-bar-title">
+                                            <h3 class="fw-normal">Notifications</h3>
+                                            <div><span>0 Unread</span></div>
+                                        </div>
+                                        <ul class="notification-ul">
+
+                                        </ul>
+                                             <div class="no-notifications">
+                                                <h1><ion-icon name="notifications-off-outline"></ion-icon></h1>
+                                                <h3>No New Notifications</h3>
+                                             </div>
+                                    </div>
+                                </div>
+
+                                <div class="header-tool tool-item profile-tool">
+
                                 <div class="user-name">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
                                     <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
                                 </div>
+                            
+                                    <div class="header-tool-bar profile-bar">
+                                        <div class="profile-bar-tools">
+                                            <div class="profile-bar-tool">
+                                                <ion-icon name="person-outline"></ion-icon>
+                                                <span>Profile</span>
+                                            </div>
+                                            <div class="profile-bar-tool">
+                                                <ion-icon name="log-out-outline"></ion-icon>
+                                                <span>Log Out</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="user-name tool-item">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -101,12 +160,12 @@
 
             <!-- contacts container -->
 
-            <div class="contacts container-fluid px-4">
+            <div class="contacts container-fluid px-4 light-element">
 
                 <!-- contacts header -->
 
-                <div class="contacts__head row align-items-center">
-                    <div class="fw-bolder fs-5 col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">Contacts</div>
+                <div id="top-scroll-btn" class="contacts__head row align-items-center light-element">
+                    <div class="contacts__head-title fw-bolder fs-5 col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">Contacts</div>
                     <div class="contacts__head-input col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7">
                         <div class="head-input">
                             <input type="text" placeholder="Search Contact">
@@ -121,8 +180,9 @@
 
                 <div class="row">
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -132,8 +192,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -143,8 +204,45 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -154,8 +252,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -165,8 +264,45 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -176,8 +312,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -187,8 +324,33 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -198,8 +360,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -209,8 +372,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -220,8 +384,45 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -231,8 +432,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -242,8 +444,33 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
+                                <div class="avatar"></div>
+                                <div class="name-email">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
+                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -253,8 +480,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -264,8 +492,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -275,8 +504,9 @@
                         </div>
                     </div>
                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -285,9 +515,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -296,152 +527,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
+                     <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="p-3 contact-item">
                             <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
-                                <div class="avatar"></div>
-                                <div class="name-email">
-                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
-                                    <span class="op-7 fw-normal d-block fs-11">jsonTaylor1998@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contacts__parent-item col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="p-3">
-                            <div class="contact-item__name-email">
+                                <button>View Contact</button>
                                 <div class="avatar"></div>
                                 <div class="name-email">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
@@ -453,6 +542,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="top-scroll-btn"><ion-icon name="caret-up-outline"></ion-icon></div>
     </div>
 
 

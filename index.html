@@ -13,7 +13,7 @@
 
     <div class="parent">
         <div class="page w-100">
-            <header class="header padding_left">
+             <header class="header padding_left light-element">
                 <div class="container-fluid h-100 px-4">
                     <div class="row h-100 align-items-center">
                         <div class="menu-icon col-1">
@@ -32,15 +32,74 @@
 
                         <div class="header__tools col-11">
                             <div class="header__tools-items">
-                                <div><img src="./imgs/headerIcons/geo.png" alt=""></div>
-                                <div style="transform: rotate(-25deg);">
-                                    <img src="./imgs/headerIcons/dark-mode.png" alt="">
+                                <div class="header-tool tool-item">
+                                    <img class="header-lang-png" src="../imgs/headerIcons/usa.png" alt="">
+                                    <div class="header-tool-bar lang-bar">
+                                        <div class="languages">
+                                            <div class="lang">
+                                                <img src="..//imgs/headerIcons/usa.png" alt="">
+                                                <span>English</span>
+                                            </div>
+                                            <div class="lang">
+                                                <img src="..//imgs/headerIcons/geo.png" alt="">
+                                                <span>georgian</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div><img src="./imgs/headerIcons/notification.png" alt=""></div>
+                                <div class="header-tool dark-mode-icon">
+                                    <div class="moon-icon header-tool-icon">
+                                        <ion-icon name="moon-outline"></ion-icon>
+                                    </div>
+                                    <div class="sun-icon header-tool-icon d-none">
+                                        <ion-icon name="sunny-outline"></ion-icon>
+                                    </div>
+                                </div>
+
+                                <div class="header-tool tool-item">
+                                    <div class="header-tool-icon">
+                                        <ion-icon name="notifications-outline"></ion-icon>
+                                    </div>
+
+                                    <div class="header-tool-bar notif-bar">
+                                        <div class="header-tool-bar-title">
+                                            <h3 class="fw-normal">Notifications</h3>
+                                            <div><span>0 Unread</span></div>
+                                        </div>
+                                        <ul class="notification-ul">
+
+                                        </ul>
+                                             <div class="no-notifications">
+                                                <h1><ion-icon name="notifications-off-outline"></ion-icon></h1>
+                                                <h3>No New Notifications</h3>
+                                             </div>
+                                    </div>
+                                </div>
+
+                                <div class="header-tool tool-item">
+
                                 <div class="user-name">
                                     <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
                                     <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
                                 </div>
+                            
+                                    <div class="header-tool-bar profile-bar">
+                                        <div class="profile-bar-tools">
+                                            <div class="profile-bar-tool">
+                                                <ion-icon name="person-outline"></ion-icon>
+                                                <span>Profile</span>
+                                            </div>
+                                            <div class="profile-bar-tool">
+                                                <ion-icon name="log-out-outline"></ion-icon>
+                                                <span>Log Out</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="user-name tool-item">
+                                    <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                    <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
+                                </div> -->
                             </div>
                         </div>
                     </div>
